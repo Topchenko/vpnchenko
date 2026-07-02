@@ -15,11 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download subscriptions
-        run: |
-          curl -L "https://142.111.244.83:2096/sub/jb5my60bgr0x64jz" > sub.txt
-          echo "" >> sub.txt
-          curl -L "https://186.246.47.135:2096/sub/b5tq5izs9xc027kl" >> sub.txt
+- name: Download subscriptions
+  run: |
+    curl -L "https://142.111.244.83:2096/sub/jb5my60bgr0x64jz" | base64 -d > sub.txt
+    echo "" >> sub.txt
+    curl -L "https://186.246.47.135:2096/sub/b5tq5izs9xc027kl" | base64 -d >> sub.txt
 
       - name: Commit
         run: |
