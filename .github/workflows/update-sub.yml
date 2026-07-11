@@ -17,7 +17,9 @@ jobs:
 
       - name: Download subscriptions
         run: |
-          curl -L "https://142.111.244.83:2096/sub/jb5my60bgr0x64jz" | base64 -d > sub.txt
+          curl -k -L "https://104.165.244.181:2096/sub/5fi9tq8dnnjs6fzx" | base64 -d > sub.txt
+          echo "" >> sub.txt
+          curl -L "https://142.111.244.83:2096/sub/jb5my60bgr0x64jz" | base64 -d >> sub.txt
           echo "" >> sub.txt
           curl -L "https://186.246.47.135:2096/sub/b5tq5izs9xc027kl" | base64 -d >> sub.txt
 
